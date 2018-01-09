@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ListView headers take height into account even when visibility = GONE, so wrap it with an extra LinearLayout
+per http://pivotallabs.com/android-tidbits-6-22-2011-hiding-header-views/
+-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/emptyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:gravity="center"
+        android:text="@string/empty_list"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/loading_shake_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+
+        />
+
+</android.support.design.widget.CoordinatorLayout>
